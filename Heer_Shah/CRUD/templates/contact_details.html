@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <title>View</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Contact Details</h1>
+        <!-- TODO: Implement the href for the a tag below -->
+        <a href="{% url 'contact_list' %}"> <button type="button" class="btn btn-primary">Go to Home</button></a>&nbsp;
+        <!-- TODO: Implement the href for the a tag below -->
+        <a href="{% url 'edit_contact' contact.id %}"> <button type="button" class="btn btn-success">Edit Contact</button></a>&nbsp;
+        <!-- TODO: Implement the href for the a tag below -->
+        <a href="{% url 'delete_contact' contact.id %}"><button type="button" class="btn btn-danger">Delete Contact</button></a>
+        <table class="table table-bordered my-3">
+            <tr>
+                <th>Contact Name</th>
+                <!-- TODO: Implement the CONTACT_NAME  -->
+                <td>{{ contact.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <!-- TODO: Implement the CONTACT_EMAIL  -->
+                <td>{{ contact.email }}</td>
+            </tr>
+            <tr>
+                <th>Contact Notes</th>
+                <!-- TODO: Implement the CONTACT_NOTES  -->
+                <td>{{ contact.notes }}</td>
+            </tr>
+            <tr>
+                <th>Created Time</th>
+                <!-- TODO: Implement the CONTACT_CREATED_AT  -->
+                <td>{{ contact.created_at }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="text-center my-5">
+        &copy; 2023 Heer Shah
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
